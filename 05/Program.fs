@@ -17,7 +17,7 @@ let rec search (s : char list) (rows : int list)
 let getSeat (s : string)
     =
     let rows = {0 .. 127} |> List.ofSeq
-    let cols = {0 ..7} |> List.ofSeq
+    let cols = {0 .. 7} |> List.ofSeq
     let instr = s |> List.ofSeq
 
     let row = search (List.take 7 instr) rows
@@ -29,18 +29,8 @@ let getId (row : int, col : int)
     =
     row * 8 + col
 
-let nextSeat (row : int, col : int)
-    =
-    if col = 7
-    then (row + 1, 0)
-    else (row, col + 1) 
-
 [<EntryPoint>]
 let main argv =
-    // let r = 
-    //     File.ReadAllLines "input.txt"
-    //     |> Seq.map (getId << getSeat)
-    //     |> Seq.max
 
     let r = 
         File.ReadAllLines "input.txt"
