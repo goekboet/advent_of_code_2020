@@ -25,6 +25,5 @@ let main argv =
         |> Seq.map countAllYes
         |> Seq.reduce (+)
         
-
     printfn "%i" r
     0 // return an integer exit code
