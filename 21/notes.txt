@@ -1,0 +1,65 @@
+mxmxvkd kfcds sqjhc nhms (contains dairy, fish)
+trh fvjkl sbzzf mxmxvkd (contains dairy)
+sqjhc fvjkl (contains soy)
+sqjhc mxmxvkd sbzzf (contains fish)
+
+dairy
+#####
+mxmxvkd
+kfcds
+sqjhc
+nhms
+trh
+fvjkl
+sbzzf
+
+fish
+####
+mxmxvkd
+kfcds
+sqjhc
+nhms
+sbzzf
+
+soy
+###
+sqjhc
+fvjkl
+
+mxmxvkd - dairy
+sqjhc - fish
+fvjkl - soy
+
+ans: kfcds, nhms, sbzzf, trh
+
+mxmxvkd [dairy, fish]
+kfcds [dairy, fish]
+sqjhc [soy, dairy, fish]
+nhms [dairy, fish]
+trh [dairy]
+fvjkl [dairy, soy]
+sbzzf [dairy, fish]
+
+mxmxvkd sqjhc (contains dairy, fish)
+sqjhc - fish
+mxmxvkd - dairy
+
+mxmxvkd(soy) kfcds(dairy,soy,fish) sqjhc(dairy) nhms(dairy,soy,fish) (contains dairy, fish)
+
+1. Parse set of all ingredients
+   - Set of all ingredients
+   - Set of all allergens
+   - List of entries : (Set ingredient, Set allergen)
+2. For each entry
+   - Take difference between allIngredients and listed ingredients. Add the listed allergens to the resultmap of the difference.
+3. Sum all ingredients which have a set that is the same as all allergens
+
+1. fvjkl (dairy, fish), sbzzf (dairy, fish), sqjhc (dairy, fish), trh (dairy, fish)
+2. nhms (dairy), kfcds (dairy),fvjkl (dairy, fish), sbzzf (dairy, fish), sqjhc (dairy, fish), trh (dairy, fish)
+3. mxmxvkd (soy), nhms (dairy, soy), kfcds (dairy, soy),fvjkl (dairy, fish, soy), sbzzf (dairy, fish, soy), sqjhc (dairy, fish), trh (dairy, fish, soy)
+4. mxmxvkd (soy), nhms (dairy, soy, fish), kfcds (dairy, soy, fish),fvjkl (dairy, fish, soy), sbzzf (dairy, fish, soy), sqjhc (dairy, fish), trh (dairy, fish, soy)
+
+trh (dairy, fish, soy)
+sbzzf (dairy, fish, soy)
+kfcds (dairy, soy, fish)
+nhms (dairy, soy, fish)
